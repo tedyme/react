@@ -12,9 +12,6 @@ window.Timer = React.createClass({
     componentDidMount: function () {
         this.tick()
     },
-    componentDidUpdate: function () {
-        console.log('updating');
-    },
     render: function () {
         return <span>{this.state.tick} {this.props.enabled}</span>;
     },
