@@ -6,21 +6,6 @@ window.Search = React.createClass({
         resetSearch: React.PropTypes.func.isRequired,
         search: React.PropTypes.object.isRequired
     },
-    // getDefaultProps: function () { 
-    //     return  {
-    //         categories: [],
-    //         setCategory: function () {
-
-    //         },
-    //         setSearch: function () {
-
-    //         },
-    //         resetSearch: function () {
-
-    //         },
-    //         search: {}
-    //     }
-    // },
     handleCategoryChosen: function (evt) {
         evt.preventDefault();
         this.props.setCategory(evt.target.getAttribute('href'));

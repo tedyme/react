@@ -28,25 +28,9 @@ window.Recipes = React.createClass({
 
         return out;
     },
-    filterData: function (data) {
-        var out = data,
-            that = this;
-        if (this.props.search.query || this.props.search.ingredients) {
-            out = data.filter(function (item) {
-                return  (that.props.search.query != '' && 
-                            (item.title.toLowerCase().indexOf(that.props.search.query.toLowerCase()) > -1 || 
-                            item.ingredients.indexOf(that.props.search.query.toLowerCase()) > -1)) ||
-                        (that.props.search.ingredients != '' &&
-                            (item.title.toLowerCase().indexOf(that.props.search.ingredients.toLowerCase()) > -1 ||
-                            item.ingredients.toLowerCase().indexOf(that.props.search.ingredients.toLowerCase()) > -1));
-            });
-        }
-        
-        return out;
-    },
     render: function () {
         var search = this.props.search,
-            data = this.filterData(this.props.data),
+            data = this.props.data,
             rows = <h3>No recipes found</h3>;
 
             if (data.length) {
