@@ -125,20 +125,20 @@
 		{
 			"title": "Vegan",
 			"subcategories": [{
-					"title": "Rise",
-					"value": "rise"
+					"title": "Rice",
+					"value": "rice"
 				},
 				{
-					"title": "Rise 1",
-					"value": "rise1"
+					"title": "Broccoli",
+					"value": "broccoli"
 				},
 				{
-					"title": "Rise 2",
-					"value": "rise2"
+					"title": "Potato",
+					"value": "potato"
 				},
 				{
-					"title": "Rise 3",
-					"value": "rise3"
+					"title": "Spinach",
+					"value": "spinach"
 				}
 			]
 		},
