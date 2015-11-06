@@ -1,15 +1,30 @@
 window.Row = React.createClass({
+    propTypes: {
+        recipe: React.PropTypes.object.isRequired,
+        category: React.PropTypes.string
+    },
+    getDefaultProps: function () {
+        return {
+            category: ''
+        }
+    },
     render: function () {
+        var visible = '';
+        if (this.props.category === '') {
+            visible = 'hidden';
+        }
         return <div className="media">
                     <div className="media-left">
-                        <a href="http://www.recipezaar.com/Curried-Salmon-and-Rice-Slice-182543">
-                            <img className="media-object" src="http://img.recipepuppy.com/344584.jpg" alt="Curried Salmon and Rice Slice"/>
+                        <a href={this.props.recipe.href}>
+                            <img className="media-object" src={this.props.recipe.thumbnail} alt={this.props.recipe.title}/>
                         </a>
                     </div>
                     <div className="media-body">
-                        <h4 className="media-heading">Curried Salmon and Rice Slice</h4>
-                        <p><b>ingredients</b>: Salmon</p>
-                        <p><b>Category</b>: Fish</p>
+                        <a href={this.props.recipe.href}>
+                            <h4 className="media-heading">{this.props.recipe.title}</h4>
+                        </a>
+                        <p><b>ingredients</b>: {this.props.recipe.ingredients}</p>
+                        <p className={visible}><b>Category</b>: Fish</p>
                     </div>
                 </div>;
     }

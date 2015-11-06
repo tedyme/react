@@ -1,4 +1,7 @@
 window.Timer = React.createClass({
+    propTypes: {
+        categories: React.PropTypes.bool
+    },
     getDefaultProps: function () {
         return {
             enabled: true
